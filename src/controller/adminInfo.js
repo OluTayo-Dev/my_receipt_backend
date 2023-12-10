@@ -25,11 +25,11 @@ const createAdmin = async (req, res) => {
     console.error('Error creating admin:', error);
 
     // Check for duplicate key error
-    if (error.code === 11000 || error.code === 11001) {
-      return res.status(400).json({ message: "Duplicate key error. Admin with the same loginID already exists." });
-    }
+    // if (error.code === 11000 || error.code === 11001) {
+    //   return res.status(400).json({ message: "Duplicate key error. Admin with the same loginID already exists." });
+    // }
 
-    return res.status(500).json({ message: "Failed to create Admin", error: error.message });
+    // return res.status(500).json({ message: "Failed to create Admin", error: error.message });
   }
 };
 
